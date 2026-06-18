@@ -144,7 +144,7 @@
                 alert("Please select at least one item to order.");
                 return;
             }
-            let message = `*Order details From Room **Teak - 1:*\n\n${orderDetails}\nTotal Bill: ₹${total}\n\n*Please Verify Order Details Before Sending Message*`;
+            let message = `*_Order details From Room_ Teak - 1:*\n\n${orderDetails}\nTotal Bill: ₹${total}\n\n`;
             let encodedMessage = encodeURIComponent(message);
             let whatsappURL = `https://wa.me/919740116661?text=${encodedMessage}`;
             window.open(whatsappURL, "_blank");
