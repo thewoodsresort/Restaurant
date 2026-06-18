@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wild Sapiens Station - Order Food</title>
+    <title>The Woods Resorts - Order Food</title>
     <style>
         body { font-family: Arial, sans-serif; text-align: center; margin: 20px; background-image: url('bg.jpeg'); background-size: cover; background-repeat: no-repeat; background-attachment: fixed; }
         h1 { font-family: 'Brush Script MT', cursive; font-size: 40px; color: #ffffff; }
@@ -19,7 +19,7 @@
     </style>
 </head>
 <body>
-    <h1>Wild Sapiens Station</h1>
+    <h1>The Woods Resorts</h1>
 
     <button class="category-button" onclick="showCategory('beverages')">Beverages</button>
     <button class="category-button" onclick="showCategory('breakfast')">Breakfast</button>
@@ -27,7 +27,7 @@
     <button class="category-button" onclick="showCategory('dinner')">Dinner</button>
 
     <div id="beverages" class="menu-section">
-        <h2>Beverages:</h2>
+        <h2>Beverages & Snacks:</h2>
         <div class="menu-list"></div>
     </div>
     <div id="breakfast" class="menu-section">
@@ -102,10 +102,10 @@
             let minute = now.getMinutes();
             let currentTime = hour * 60 + minute;
             let availableTimes = {
-                beverages: { start: 001, end: 1290 },
-                breakfast: { start: 001, end: 630 },
-                lunch: { start: 720, end: 900 },
-                dinner: { start: 001, end: 1410 }
+                beverages: { start: 450, end: 1290 },
+                breakfast: { start: 450, end: 600 },
+                lunch: { start: 750, end: 900 },
+                dinner: { start: 1170, end: 1290 }
             };
             document.querySelectorAll(".menu-section").forEach(section => section.style.display = "none");
             if (availableTimes[category]) {
@@ -144,9 +144,9 @@
                 alert("Please select at least one item to order.");
                 return;
             }
-            let message = `*Order details Room No. /Tabel No. **1:*\n\n${orderDetails}\nTotal Bill: ₹${total}\n\n*Please Verify Order Details Before Sending Message*`;
+            let message = `*Order details From Room **Teak - 1:*\n\n${orderDetails}\nTotal Bill: ₹${total}\n\n*Please Verify Order Details Before Sending Message*`;
             let encodedMessage = encodeURIComponent(message);
-            let whatsappURL = `https://wa.me/918436778056?text=${encodedMessage}`;
+            let whatsappURL = `https://wa.me/919740116661?text=${encodedMessage}`;
             window.open(whatsappURL, "_blank");
         }
     </script>
